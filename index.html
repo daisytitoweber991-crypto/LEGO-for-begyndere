@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEGO – En hobby for begyndere</title>
+
+  <style>
+    :root {
+      --background: #F6F1EA;
+      --text: #2C2416;
+      --accent: #C46A4A;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      padding: 12px;
+      background: white;
+      color: var(--text);
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-block: 24px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav a {
+      display: inline-block;
+      padding-block: 8px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      border-bottom: 2px solid var(--accent);
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--text);
+      outline-offset: 5px;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, serif;
+      line-height: 1.2;
+    }
+
+    .hero {
+      max-width: 700px;
+      padding-block: 64px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(36px, 6vw, 64px);
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 580px;
+      margin-bottom: 28px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #21150F;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #B96042;
+    }
+
+    .benefits {
+      padding-block: 16px 64px;
+    }
+
+    .benefits h2 {
+      margin-bottom: 32px;
+      text-align: center;
+      font-size: clamp(28px, 4vw, 36px);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 6px 18px rgb(44 36 22 / 8%);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding-block: 24px;
+      border-top: 1px solid #D8CEC2;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav ul {
+        gap: 12px 20px;
+      }
+
+      .hero {
+        padding-block: 40px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#indhold">Gå til indhold</a>
+
+  <header class="header container">
+    <a class="brand" href="index.html">
+      <span>LEGO</span> for begyndere
+    </a>
+
+    <nav aria-label="Hovednavigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Forside</a></li>
+        <li><a href="begynderguide.html">Begynderguide</a></li>
+        <li><a href="foerste-projekt.html">Første projekt</a></li>
+        <li><a href="gode-raad.html">Gode råd</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="indhold" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">LEGO er også <span>for dig</span></h1>
+      <p>
+        LEGO handler ikke kun om leg. Det er kreativitet, ro og
+        glæde for voksne også. Her finder du inspiration og
+        vejledning til at komme i gang.
+      </p>
+      <a class="button" href="begynderguide.html">Start her</a>
+    </section>
+
+    <section class="benefits" aria-labelledby="benefits-title">
+      <h2 id="benefits-title">Hvorfor LEGO som voksen?</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Kreativ pause</h3>
+          <p>
+            Brug tid på kreativitet og få en pause fra skærmen.
+            Byg i dit eget tempo.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Tid sammen</h3>
+          <p>
+            Gør LEGO til hyggelig kvalitetstid sammen med
+            familien eller en ven.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Nemt at begynde</h3>
+          <p>
+            Start med et overskueligt projekt og byg videre,
+            når du har lyst.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Studieprojekt om LEGO. Ikke tilknyttet LEGO Group.</p>
+  </footer>
+</body>
+</html>
